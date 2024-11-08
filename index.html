@@ -9,6 +9,7 @@
     <style>
         .container h2 {
             color: black;
+            display: inline;
         }
 
         /* Customização dos cards */
@@ -19,7 +20,12 @@
         /* Estilo para garantir que o conteúdo do carousel não ultrapasse os limites */
         .carousel-item img {
             object-fit: cover;
-            height: 400px; /* Definir uma altura fixa para as imagens do carousel */
+            height: 450px; /* Definir uma altura fixa para as imagens do carousel */
+            margin-top: 10px;
+        }
+
+        .container {
+            margin-top: 20px;
         }
 
         /* Responsividade para os cards */
@@ -32,26 +38,52 @@
 </head>
 <body>
 
-    <h1>carousel_bootstrap</h1>
     <div class="container">
-        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+        <div class="container">
+            <div class="btn-group">
+                <button class="btn btn-primary">
+                    Cadastrar
+                </button>
+                <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li class="dropdown-item">
+                        <a href="#">Novo usuário</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Novo fornecedor</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Novo funcionário</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Botão "Abrir Modal" ao lado do botão "Cadastrar" -->
+            <button class="btn btn-success ms-2" data-bs-toggle="modal" data-bs-target="#exemplo-modal">
+                Abrir modal
+            </button>
+        </div>
+
+        <!-- Carousel com comportamento de loop contínuo -->
+        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel" data-bs-wrap="true">
             <div class="carousel-inner">
+                <h1>carousel_bootstrap</h1>
                 <div data-bs-interval="3000" class="carousel-item active">
-                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/11/20/09/13/boho-8400680_1280.png" />
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/09/02/17/55/ai-generated-8229330_1280.jpg" />
                     <div class="carousel-caption">
-                        <h2>Obra de arte floral</h2>
+                        <h3>abstração geométrica</h3>
                     </div>
                 </div>
                 <div data-bs-interval="3000" class="carousel-item">
-                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2022/07/11/10/42/boho-style-7314646_1280.png" />
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2022/05/03/11/11/background-7171509_1280.jpg" />
                     <div class="carousel-caption">
-                        <h2>Aplicação geométrica "Boho"</h2>
+                        <h3>composição alegre</h3>
                     </div>
                 </div>
                 <div data-bs-interval="3000" class="carousel-item">
-                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/12/31/19/19/mountains-8480519_1280.jpg" />
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/09/01/19/13/background-1637197_1280.jpg" />
                     <div class="carousel-caption">
-                        <h2>Abstração sobre o mar e montanhas</h2>
+                        <h3>abstração linear 01</h3>
                     </div>
                 </div>
             </div>
@@ -68,86 +100,114 @@
             </div>
         </div>
     </div>
-    <h1>cards_bootstrap</h1>
     <div class="container">
+        <h1>cards_bootstrap</h1>
         <div class="row">
+            <!--card 01-->
             <div class="col-md-4 col-12 mb-4">
                 <article class="card">
                     <header class="card-header">
-                        Exemplos de imagens
+                        exemplo de card
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2017/11/08/15/04/computer-2930704_1280.jpg" class="card-img-top" />
+                    <img src="./img/abstract-4124262_1280.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h4 class="card-title">cards_bootstrap</h4>
-                        <p class="card-text">Estilos variados e aleatórios de cards.</p>
+                        <p class="card-text">abelhas felizes</p>
                         <a href="#" class="btn btn-primary">mais</a>
                     </div>
                 </article>
             </div>
+            <!--card 02-->
             <div class="col-md-4 col-12 mb-4">
                 <article class="card">
                     <header class="card-header">
-                        Exemplos de imagens
+                        exemplo de card
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2016/09/23/01/24/park-city-1688712_1280.jpg" class="card-img-top" />
+                    <img src="./img/austria-6398889_1280.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h4 class="card-title">cards_bootstrap</h4>
-                        <p class="card-text">Estilos variados e aleatórios de cards.</p>
+                        <p class="card-text">estilo</p>
                         <a href="#" class="btn btn-primary">mais</a>
                     </div>
                 </article>
             </div>
+            <!--card 03-->
             <div class="col-md-4 col-12 mb-4">
                 <article class="card">
                     <header class="card-header">
-                        Exemplos de imagens
+                        exemplo de card
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2017/11/08/15/04/computer-2930704_1280.jpg" class="card-img-top" />
+                    <img src="./img/colors-2004497_1280.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h4 class="card-title">cards_bootstrap</h4>
-                        <p class="card-text">Estilos variados e aleatórios de cards.</p>
+                        <p class="card-text">estilo de card aleatório</p>
                         <a href="#" class="btn btn-primary">mais</a>
                     </div>
                 </article>
             </div>
+            <!--card 04-->
             <div class="col-md-4 col-12 mb-4">
                 <article class="card">
                     <header class="card-header">
-                        Exemplos de imagens
+                        exemplo de card
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2016/09/23/01/24/park-city-1688712_1280.jpg" class="card-img-top" />
+                    <img src="./img/concrete-2420845_1280.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h4 class="card-title">cards_bootstrap</h4>
-                        <p class="card-text">Estilos variados e aleatórios de cards.</p>
+                        <p class="card-text">estilo de card aleatório</p>
                         <a href="#" class="btn btn-primary">mais</a>
                     </div>
                 </article>
             </div>
+            <!--card 05-->
             <div class="col-md-4 col-12 mb-4">
                 <article class="card">
                     <header class="card-header">
-                        Exemplos de imagens
+                        exemplo de card
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2019/08/30/15/33/accident-4441638_1280.jpg" class="card-img-top" />
+                    <img src="./img/kansas-city-1380036_1280.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h4 class="card-title">cards_bootstrap</h4>
-                        <p class="card-text">Estilos variados e aleatórios de cards.</p>
+                        <p class="card-text">estilo de card aleatório</p>
                         <a href="#" class="btn btn-primary">mais</a>
                     </div>
                 </article>
             </div>
+            <!--card 06-->
             <div class="col-md-4 col-12 mb-4">
                 <article class="card">
                     <header class="card-header">
-                        Exemplos de imagens
+                        exemplo de card
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2016/11/24/10/00/science-fiction-1855803_1280.jpg" class="card-img-top" />
+                    <img src="./img/sofia-3658934_1280.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h4 class="card-title">cards_bootstrap</h4>
-                        <p class="card-text">Estilos variados e aleatórios de cards.</p>
+                        <p class="card-text">estilo de card aleatório</p>
                         <a href="#" class="btn btn-primary">mais</a>
                     </div>
                 </article>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Modal de exemplo -->
+    <div class="modal" id="exemplo-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Título da modal</h5>
+                    <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit quod labore eveniet esse enim, odio beatae consequuntur quas provident sed ex minus ducimus modi. Molestiae hic alias qui harum labore.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                </div>
             </div>
         </div>
     </div>
